@@ -16,6 +16,26 @@ public class AdFeature {
     private int matchType;//0:相等 1：包含 2：相似
 
     public double bid;
+    public double ctr;
+    public double ecpm;
+
+    public double getEcpm() {
+        return ecpm;
+    }
+
+    public void setEcpm(double ecpm) {
+        this.ecpm = ecpm;
+    }
+
+    public double getCtr() {
+        return ctr;
+    }
+
+    public void setCtr(double ctr) {
+        this.ctr = ctr;
+    }
+
+
 
     public double getBid() {
         return bid;
@@ -35,6 +55,7 @@ public class AdFeature {
         sim_title = -1.0;
         matchType = -1;
         bid = -1.0;
+
     }
 
     public AdFeature(String adid_tmp, String browser_tmp, String os_tmp, int hour_tmp, String region_tmp, double sim_title_tmp, double sim_keyword_tmp, int matchType_tmp){
@@ -48,6 +69,17 @@ public class AdFeature {
         matchType = matchType_tmp;
     }
 
+    public String toString(){
+        return "adid="+adid+"\t"+
+                "browser="+browser+"\t"+
+                "os="+os+"\t"+
+                "hour="+String.valueOf(hour)+"\t"+
+                "region="+region+"\t"+
+                "sim_keyword="+String.valueOf(sim_keyword)+"\t"+
+                "sim_title="+String.valueOf(sim_title)+"\t"+
+                "matchType="+String.valueOf(matchType)+"\t"+
+                "bid="+String.valueOf(bid)+"\n";
+    }
     public String getAdid() {
         return adid;
     }

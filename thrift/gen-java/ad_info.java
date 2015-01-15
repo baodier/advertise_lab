@@ -4,7 +4,6 @@
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  *  @generated
  */
-package adserver.thrift;
 import org.apache.thrift.scheme.IScheme;
 import org.apache.thrift.scheme.SchemeFactory;
 import org.apache.thrift.scheme.StandardScheme;
@@ -294,13 +293,7 @@ public class ad_info implements org.apache.thrift.TBase<ad_info, ad_info._Fields
   }
 
   public String getSearchWord() {
-    String ret = "";
-    try{
-      ret = java.net.URLDecoder.decode(this.searchWord, "utf-8");
-    }catch (Exception e){
-      ret = "decode error";
-    }
-    return ret;
+    return this.searchWord;
   }
 
   public ad_info setSearchWord(String searchWord) {

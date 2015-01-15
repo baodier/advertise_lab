@@ -11,12 +11,17 @@ import org.apache.thrift.transport.TTransportException;
 import adserver.thrift.AdServerService;
 import adserver.thrift.AdServerService.Processor;
 
+import javax.swing.text.html.HTMLDocument;
+import java.awt.geom.AffineTransform;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 public class adserver {
 	public void startServer() {  
         try {  
-        	System.out.println("thrift server open port 1234");
+        	System.out.println("thrift server open port 1267");
             TServerSocket serverTransport = new TServerSocket(1267);
             AdServerService.Processor process = new Processor(new AdServerHandler());  
             Factory portFactory = new TBinaryProtocol.Factory(true, true);  
@@ -31,12 +36,10 @@ public class adserver {
     }  
       
     public static void main(String[] args) {  
-    	/*System.out.println("thrift server init");
+    	System.out.println("thrift server init");
         adserver server = new adserver();  
         System.out.println("thrift server start");
         server.startServer();  
-        System.out.println("thrift server end");*/
-        AdServerHandler handler = new AdServerHandler();
-        handler.adIndex("111");
+        System.out.println("thrift server end");
     }  
 }
