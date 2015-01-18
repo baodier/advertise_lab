@@ -137,6 +137,7 @@ public class AdServerHandler implements Iface{
 		} catch (SQLException e) {
 			String message = "Error while executing sql query";
 			System.out.println(message);
+			System.out.println(e.getMessage());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} finally {

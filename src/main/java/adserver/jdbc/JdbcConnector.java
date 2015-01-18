@@ -39,9 +39,9 @@ public class JdbcConnector {
     public void initial() throws ClassNotFoundException, IOException, SQLException {
 
         // 加载配置文件
-        String url = "jdbc:mysql://127.0.0.1:3306/advertise";//props.getProperty("jdbcUrl");
+        String url = "jdbc:mysql://166.111.14.2:3316/advertise_liuyongqi";//props.getProperty("jdbcUrl");
         String user = "root";//props.getProperty("username");
-        String password = "haha";//props.getProperty("password");
+        String password = "cwc";//props.getProperty("password");
 
         // 加载JDBC驱动
         Class.forName("com.mysql.jdbc.Driver");
